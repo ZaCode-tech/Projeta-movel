@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProjetaMóvel – Fotografe o local e receba o projeto do móvel</title>
+<meta name="description" content="Tire uma foto, desenhe onde o móvel vai ficar e receba planta, lista de corte, passo a passo e arquivos para SketchUp e Promob.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1d4e89;--bg2:#17406f;--line:#cfe3f7;--ink:#f4f9ff;--pencil:#f4d35e;--muted:#b9d3ee}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Barlow,system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--ink);background:var(--bg);
+background-image:linear-gradient(rgba(207,227,247,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(207,227,247,.12) 1px,transparent 1px);background-size:32px 32px}
+h1,h2,h3{font-family:"Barlow Condensed",Impact,sans-serif;font-weight:700;line-height:1.05;margin:0}
+h1{font-size:clamp(2.8rem,9vw,5.6rem);letter-spacing:.01em}
+h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:.6em}
+h3{font-size:1.5rem;margin-bottom:.2em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pencil);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{padding:20px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.6rem;text-decoration:none}
+nav a{margin-left:20px;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:30px 0 70px;display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center}
+.hero p{max-width:34ch;color:var(--muted);font-size:1.25rem}
+.btn{display:inline-block;background:var(--pencil);color:#16253a;font-weight:500;padding:14px 26px;text-decoration:none;border-radius:3px;margin:8px 12px 8px 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.draw{width:100%;height:auto}
+.draw *{vector-effect:non-scaling-stroke}
+section{padding:64px 0;border-top:2px solid rgba(207,227,247,.35)}
+section:nth-of-type(even){background:var(--bg2)}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:12px;padding:16px 0;border-bottom:1px dashed rgba(207,227,247,.4)}
+.steps li::before{content:counter(s);font-family:"Barlow Condensed",sans-serif;font-size:2.2rem;color:var(--pencil);line-height:1}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px 40px}
+.cols p{margin:.2em 0 0;color:var(--muted)}
+.fmt{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.fmt span{border:2px solid var(--line);padding:4px 14px;font-family:"Barlow Condensed",sans-serif;font-size:1.3rem}
+.cta{text-align:center}
+.cta p{max-width:44ch;margin:0 auto 22px;color:var(--muted)}
+footer{padding:30px 0;color:var(--muted);font-size:.9rem;border-top:2px solid rgba(207,227,247,.35)}
+@media(max-width:760px){.hero{grid-template-columns:1fr}nav{display:none}}
+@media(prefers-reduced-motion:no-preference){.draw .ln{stroke-dasharray:1200;stroke-dashoffset:1200;animation:d 3.2s ease-out forwards}}
+@keyframes d{to{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#">ProjetaMóvel</a>
+<nav><a href="#como">Como funciona</a><a href="#recursos">Recursos</a><a href="#comprar">Comprar</a></nav></div></header>
+
+<main>
+<div class="wrap hero">
+ <div>
+  <h1>Fotografe o espaço. Receba o projeto.</h1>
+  <p>Desenhe com o dedo onde o móvel vai ficar e o ProjetaMóvel entrega medidas de cada peça, passo a passo e arquivos para SketchUp e Promob.</p>
+  <a class="btn" href="#comprar">Quero o app</a><a class="btn alt" href="#como">Ver como funciona</a>
+ </div>
+ <svg class="draw" viewBox="0 0 420 380" role="img" aria-label="Desenho técnico de um guarda-roupa com cotas de 1800 por 2200 milímetros">
+  <g fill="none" stroke="#cfe3f7" stroke-width="2">
+   <path class="ln" d="M60 40h240v300H60z"/><path class="ln" d="M180 40v300"/>
+   <path class="ln" d="M70 120h100M70 200h100M70 280h100M190 120h100M190 200h100M190 280h100" stroke-width="1.5"/>
+   <path class="ln" d="M60 40l60-30h240l-60 30M300 340l60-30V10" stroke-width="1.5"/>
+  </g>
+  <g stroke="#f4d35e" stroke-width="1.5" fill="none"><path d="M60 365h240M60 357v16M300 357v16M335 40v300M327 40h16M327 340h16"/></g>
+  <g fill="#f4d35e" font-family="Barlow Condensed,sans-serif" font-size="20"><text x="150" y="358">1800</text><text x="345" y="196">2200</text></g>
+ </svg>
+</div>
+
+<section id="como"><div class="wrap">
+ <h2>Do local ao manual em cinco passos</h2>
+ <ol class="steps">
+  <li><div><h3>Tire a foto do local</h3>Parede do quarto, da cozinha, da sala. Use a câmera ou a galeria.</div></li>
+  <li><div><h3>Desenhe onde o móvel vai ficar</h3>Passe o dedo na tela e confirme a área.</div></li>
+  <li><div><h3>Diga qual móvel</h3>Digite “guarda-roupa” e veja todos os modelos dentro da foto. Troque pelas setas.</div></li>
+  <li><div><h3>Informe as medidas</h3>Parede, teto e o tamanho do móvel. O app avisa se não cabe.</div></li>
+  <li><div><h3>Baixe o projeto</h3>Planta montada e desmontada, lista de corte, instruções em milímetros e PDF.</div></li>
+ </ol>
+</div></section>
+
+<section id="recursos"><div class="wrap">
+ <h2>O que vem no projeto</h2>
+ <div class="cols">
+  <div><h3>Montado e desmontado</h3><p>Vistas frontal e lateral e o plano de todas as peças.</p></div>
+  <div><h3>Lista de corte</h3><p>Cada peça com comprimento, largura, espessura e quantidade.</p></div>
+  <div><h3>Passo a passo</h3><p>Ordem de montagem com as medidas de cada etapa.</p></div>
+  <div><h3>Vários modelos</h3><p>Portas de abrir, de correr, nichos e módulos para o mesmo móvel.</p></div>
+ </div>
+ <h3 style="margin-top:44px">Arquivos para abrir onde você já trabalha</h3>
+ <div class="fmt"><span>PDF</span><span>DXF</span><span>OBJ</span><span>CSV</span></div>
+ <p style="color:var(--muted)">DXF e OBJ importam no SketchUp Pro e em programas de projeto como o Promob (conforme a versão).</p>
+</div></section>
+
+<section id="comprar" class="cta"><div class="wrap">
+ <h2>Comece a projetar hoje</h2>
+ <p>Disponível para Android. Versão para iPhone em desenvolvimento.</p>
+ <a class="btn" href="https://github.com/SEU-USUARIO/ProjetaMovel">Baixar no GitHub</a>
+ <a class="btn alt" href="mailto:contato@seudominio.com.br">Falar com a gente</a>
+</div></section>
+</main>
+<footer><div class="wrap">ProjetaMóvel. SketchUp e Promob são marcas de seus respectivos donos; este app não é afiliado a elas.</div></footer>
+</body>
+</html>
